@@ -1,0 +1,45 @@
+---
+import HfLayout from "../layouts/hf-layout.astro";
+
+---
+
+<HfLayout as="footer">
+  <ul>
+    <li><a target="blank" href="https://github.com/Elisa-MP">github</a></li>
+    <li><a target="blank" href="mailto:elisa@pircher.tech">elisa@pircher.tech</a></li>
+    <li><a target="blank" href="https://www.xing.com/profile/Elisa_Pircher066112">xing</a></li>
+  </ul>
+</HfLayout>
+
+
+<style>
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 1em 2em;
+    background-color: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  a:hover {
+    background-color: var(--accent);
+  }
+
+  a:active {
+    background-color: var(--bg);
+  }
+
+  a:after {
+    background-color: var(--surface);
+  }
+</style>

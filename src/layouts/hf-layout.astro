@@ -1,0 +1,20 @@
+---
+type TagType = 'header' | 'footer';
+const { as = 'header' } : { as?: TagType } = Astro.props
+const Tag = as
+---
+
+<Tag class="tag">
+    <slot />
+</Tag>
+
+<style>
+
+  .tag {
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    margin: 1em 0;
+  }
+
+</style>

@@ -1,0 +1,130 @@
+---
+import TimelineEntry from "../components/timeline-entry.astro";
+import Layout from "../layouts/layout.astro";
+
+const entries = [
+  { year: "09/24 - 07/26", title: "Ausbildung Fachinformaikerin für Anwendungsentwicklung", text: "Laboratoire Biosthétique Kosmetik GmbH & Co. KG, Pforzheim"},
+  { year: "02/22 - 08/24", title: "Mitarbeiterin Personalentwicklung", text: "THOST Projektmanagement GmbH, Pforzheim"},
+  { year: "09/19 - 02/22", title: "Ausbildung Kauffrau für Büromanagement mit ZQ", text: "THOST Projektmanagement GmbH, Pforzheim"},
+  { year: "2018 - heute", title: "Servicekraft", text: "Nebenberuflich, diverse Gastronomien"},
+  { year: "09/15 - 07/18", title: "Hermann-Gundert-Schule", text: "Abitur"},
+  { year: "09/14 - 07/15", title: "Mittlere Reife", text: ""},
+  { year: "09/09 - 07/14", title: "Schulbildung in den USA", text: ""},
+];
+---
+
+<Layout title="Curriculum Vitae">
+  <div class="wrapper">
+  
+    <div class="cv">
+      {entries.map((e) => (
+        <TimelineEntry>
+            <h3>{e.title}</h3>
+            <p>{e.year}</p>
+            <p>{e.text}</p>
+        </TimelineEntry>))}
+    </div>
+
+    <div class="skills">
+      <div class="skill">
+        <h3>Soft skills</h3>
+        <ul>
+          <li>Teamfähig</li>
+          <li>Lösungsorientiert</li>
+          <li>Lernbegeistert</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Sprachen</h3>
+        <ul>
+          <li>Deutch C2</li>
+          <li>Englisch C2</li>
+          <li>Spanisch A2</li>
+        </ul>
+      </div>
+      <div class="skill">
+        <h3>Hobbys</h3>
+        <ul>
+          <li>Kochen</li>
+          <li>Yoga</li>
+          <li>Kreatives Schreiben</li>
+          <li>Zeichnen</li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="cv-button" href="/public/cv.pdf">Download CV</a>
+  </div>
+</Layout>
+
+<style>
+  h2 {
+    grid-area: heading;
+    margin: 1em 0;
+    padding: 1em 2em;
+    border-radius: var(--radius);
+  }
+
+  h3, p {
+    margin: 0px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .cv {
+    grid-area: cv;
+    background-color: var(--surface);
+    border-radius: var(--radius);
+  }
+
+  .skills {
+    grid-area: skills;
+    padding: 2em; 
+    background-color: var(--surface);
+    border-radius: var(--radius);
+  }
+
+  .wrapper {
+    padding: 2em 2em;
+    height: fit-content;
+    border-radius: var(--radius);
+    background-color: var(--bg);
+    gap: 2em;
+    display: grid; 
+    grid-template-areas: 
+    "cv skills"
+    ". button";
+  }
+
+  .cv-button {
+    text-decoration: none;
+    max-width: fit-content;
+    justify-self: right;
+    color: var(--blue);
+    background-color: var(--surface);
+    padding: 0.5em 1em;
+    margin: 0 0.25em;
+    border-radius: var(--radius);
+    box-shadow: var(--blue) 2px 2px 10px;
+    transition: background-color 0.5s ease;
+    grid-area: button;
+  }
+
+  .cv-button:hover {
+    background-color: var(--accent);
+  }
+
+  .cv-button:active {
+    background-color: var(--bg);
+  }
+
+  .cv-button:after {
+    background-color: var(--light);
+  }

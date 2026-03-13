@@ -1,0 +1,41 @@
+---
+import '../styles/global.css'
+---
+
+<div class="nav">
+  <a class="nav-elem" href="/">Start</a>
+  <a class="nav-elem" href="/projects">Projekte</a>
+  <a class="nav-elem" href="/cv">CV</a>
+</div>
+
+<style>
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: fit-content;
+    padding: 0 2em;
+  }
+
+  .nav-elem {
+    text-decoration: none;
+    color: var(--blue);
+    background-color: var(--surface);
+    padding: 0.5em 1em;
+    margin: 0 0.25em;
+    border-radius: var(--radius);
+    box-shadow: var(--text) 2px 2px 10px -2px;
+    transition: background-color 0.5s ease;
+  }
+
+  .nav-elem:hover {
+    background-color: var(--accent);
+  }
+
+  .nav-elem:active {
+    background-color: var(--bg);
+  }
+
+  .nav-elem:after {
+    background-color: var(--surface);
+  }
+</style>

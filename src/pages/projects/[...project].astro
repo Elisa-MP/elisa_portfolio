@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/layout.astro";
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+    const projects = await getCollection('projects');
+    return projects.map(project => ({
+        params: { project: project.id }, props: { project }
+    }))
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project); 
+---
+
+<Layout title="Projekt">
+  <div class="content">
+    <Content />
+  </div>
+</Layout>
+
+<style>
+  .content {
+    background-color: var(--surface);
+    border-radius: var(--radius);
+    padding: 2em;
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/layout.astro';
+import me from "../assets/me.jpeg"
+---
+
+<Layout title="Willkommen">
+
+  <div class="wrapper">
+    <Image src={me} alt="me" class="me"/>
+    <div class="info">
+      <h2>Elisa Pircher</h2>
+      <p>Ich stehe kurz vor dem Abschluss meiner verkürzten Ausbildung zur Fachinformatikerin für Anwendungsentwicklung (Sommer 2026).</p>
+      <p>
+        Mich begeistert die Schnittstelle zwischen kreativem Design und harter Logik <br /> Ich liebe es, wenn aus einer Idee eine robuste, moderne Anwendung wird
+      </p>
+      <p>Mein Ziel? In einem starken Team an echten Herausforderungen wachsen</p>
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .wrapper {
+    display: flex;
+    gap: 1em;
+    padding: 2em;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    background: linear-gradient(
+      var(--surface) 10%,
+      var(--surface) 20%,
+      var(--bg) 20%,
+      var(--bg) 50%,
+      var(--surface) 50%
+    )
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .me {
+    border-radius: 50%;
+  }
+</style>

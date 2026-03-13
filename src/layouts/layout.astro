@@ -1,0 +1,47 @@
+---
+import Footer from '../components/footer.astro'
+import Header from '../components/header.astro'
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Elisa Pircher</title>
+	</head>
+	<body>
+    <Header title={title} />
+    <div class="wrapper">
+      <slot />
+    </div>
+    <Footer />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0 auto;
+		height: 100%;
+		background-color: var(--page-bg);
+    font-family: sans-serif;
+    color: var(--text);
+	}
+
+  body {
+    max-width: 1000px;
+    width: 1600px;
+  }
+
+  .wrapper {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+</style>

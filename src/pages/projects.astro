@@ -1,0 +1,39 @@
+---
+import ProjectTile from "../components/projectTile.astro";
+import Layout from "../layouts/layout.astro";
+import { getCollection } from "astro:content";
+
+let projects = await getCollection('projects');
+
+
+const complete = projects.filter(p => p.data.status === "complete");
+const wip = projects.filter(p => p.data.status === "wip");
+console.log(wip)
+
+---
+
+<Layout title="Projekte">
+  <div class="wrapper">
+    <h2>Projekte</h2>
+      {
+        complete.map(p => (
+          <ProjectTile {...p.data} link={p.id} />
+        ))
+      }
+
+    <h3>In Arbeit</h3>
+      {
+        wip.map(p => (
+          <ProjectTile {...p.data} link={p.id} />
+        ))
+      }
+  </div>
+</Layout>
+
+<style>
+  .wrapper {
+    background-color: var(--bg);
+    border-radius: var(--radius);
+    padding: 2em;
+  }
+</style>
