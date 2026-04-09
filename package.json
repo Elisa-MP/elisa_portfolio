@@ -12,8 +12,5 @@
   "dependencies": {
     "astro": "^5.17.1",
     "remark-external-links": "^9.0.1"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
