@@ -11,7 +11,9 @@ status: wip
 
 ### Wochenplaner für Rezepte
 
-Mein aktuelles Herzensprojekt: Ich baue einen digitalen Wochenplaner, der Ordnung in die Küchenplanung bringt. Der Fokus liegt hier für mich auf dem Lernen der gesamten Full-Stack-Architektur – vom ersten Entwurf der Datenbank in MySQL bis zur Umsetzung einer reaktiven UI mit React.
+Kochen ist kein Problem, die Frage ist nur: Was?
+
+Dieses Projekt soll mir den Alltag erleichtern: Ein digitaler Wochenplaner, der Ordnung in die Küchenplanung bringt. Der Fokus liegt hier für mich auf dem Lernen der gesamten Full-Stack-Architektur – vom ersten Entwurf der Datenbank in MySQL bis zur Umsetzung einer reaktiven UI mit React.
 
 Aktuell arbeite ich an der Strukturierung der Datenlogik, um Rezepte flexibel filtern und verwalten zu können. Für mich ist dieses Projekt der ideale Spielplatz, um zu lernen, wie man moderne Webanwendungen von Grund auf sauber und erweiterbar aufbaut.
 

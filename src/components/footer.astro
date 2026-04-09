@@ -1,38 +1,44 @@
 ---
 import HfLayout from "../layouts/hf-layout.astro";
-
+import { Image } from 'astro:assets';
+import iconGithub from '/src/assets/icon-github.svg';
+import iconMail from '/src/assets/icon-mail.svg';
+import iconXing from '/src/assets/icon-xing.svg';
+import iconLinkedin from '/src/assets/icon-linkedin.svg';
 ---
 
 <HfLayout as="footer">
-  <ul>
-    <li><a target="blank" href="https://github.com/Elisa-MP">github</a></li>
-    <li><a target="blank" href="mailto:elisa@pircher.tech">elisa@pircher.tech</a></li>
-    <li><a target="blank" href="https://www.xing.com/profile/Elisa_Pircher066112">xing</a></li>
-  </ul>
+  <div>
+    <a target="blank" href="https://github.com/Elisa-MP"><Image src={iconGithub} alt="Icon Github" width={40}/></a>
+    <a target="blank" href="mailto:elisa@pircher.tech"><Image src={iconMail} alt="Icon Mail" width={40}/></a>
+    <a target="blank" href="https://www.xing.com/profile/Elisa_Pircher066112"><Image src={iconXing} alt="Icon Xing" width={40}/></a>
+    <a target="blank" href="https://www.linkedin.com/in/elisa-pircher-9b7b491b7/"><Image src={iconLinkedin} alt="Icon Linkedin" width={40}/></a>
+  </div>
 </HfLayout>
 
 
 <style>
   
-  ul {
-    list-style-type: none;
+  div {
     display: flex;
-    justify-content: center;
-    gap: 2em;
+    justify-content: space-evenly;
     padding: 2em;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
   }
 
   a {
     text-decoration: none;
-    color: var(--text);
-    padding: 1em 2em;
-    background-color: var(--surface);
+    padding: 1em 1.5em;
+    background-color: var(--bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    transition: background-color .3s ease;
   }
 
   a:hover {
     background-color: var(--accent);
+    cursor: pointer;
   }
 
   a:active {
@@ -42,4 +48,5 @@ import HfLayout from "../layouts/hf-layout.astro";
   a:after {
     background-color: var(--surface);
   }
+
 </style>

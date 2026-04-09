@@ -1,9 +1,20 @@
 :root {
-  --surface: #dfecfd;
-  --bg: #b0c4de;
-  --page-bg: #d6dee9;
-  --accent: #a1caf1;
-  --text: #1a1a1a;
+  /* --bg: #fdf0d5; */
+  --bg: #404040;
+  --accent: #797877;
+  --page-bg: #f2f2f2;
+  --surface: #e4e0e0;
+
+  --text: #404040;
   --radius: 3em;
-  --shadow: var(--text) 2px 2px 10px -2px;
+  --shadow-color: #1a1a1a52;
+  --shadow: var(--shadow-color) 2px 2px 7px -1px;
+}
+
+@font-face {
+  font-family: 'centurygothic';
+  src: url('/src/assets/centurygothic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }

@@ -6,7 +6,7 @@ const entries = [
   { year: "09/24 - 07/26", title: "Ausbildung Fachinformaikerin für Anwendungsentwicklung", text: "Laboratoire Biosthétique Kosmetik GmbH & Co. KG, Pforzheim"},
   { year: "02/22 - 08/24", title: "Mitarbeiterin Personalentwicklung", text: "THOST Projektmanagement GmbH, Pforzheim"},
   { year: "09/19 - 02/22", title: "Ausbildung Kauffrau für Büromanagement mit ZQ", text: "THOST Projektmanagement GmbH, Pforzheim"},
-  { year: "2018 - heute", title: "Servicekraft", text: "Nebenberuflich, diverse Gastronomien"},
+  { year: "2017 - heute", title: "Servicekraft", text: "Nebenberuflich, diverse Gastronomien"},
   { year: "09/15 - 07/18", title: "Hermann-Gundert-Schule", text: "Abitur"},
   { year: "09/14 - 07/15", title: "Mittlere Reife", text: ""},
   { year: "09/09 - 07/14", title: "Schulbildung in den USA", text: ""},
@@ -35,6 +35,15 @@ const entries = [
         </ul>
       </div>
       <div class="skill">
+        <h3>Fähigkeiten</h3>
+        <ul>
+          <li>HTML / CSS</li>
+          <li>JavaScript / Typescript</li>
+          <li>React / Astro</li>
+          <li>Diverse Tools</li>
+        </ul>
+      </div>
+      <div class="skill">
         <h3>Sprachen</h3>
         <ul>
           <li>Deutch C2</li>
@@ -53,7 +62,7 @@ const entries = [
       </div>
     </div>
 
-    <a class="cv-button" href="/public/cv.pdf">Download CV</a>
+    <a class="cv-button" href="/src/assets/CV_ElisaPircher.pdf" download="CV_ElisaPircher.pdf">Download CV</a>
   </div>
 </Layout>
 
@@ -92,7 +101,7 @@ const entries = [
   }
 
   .wrapper {
-    padding: 2em 2em;
+    padding: 2em;
     height: fit-content;
     border-radius: var(--radius);
     background-color: var(--bg);
@@ -103,8 +112,24 @@ const entries = [
     ". button";
   }
 
+  @media (max-width: 1100px) {
+    .wrapper {
+      grid-template-areas: 
+      "cv"
+      "skills"
+      "button";
+    }
+
+    .skills {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
   .cv-button {
     text-decoration: none;
+    height: fit-content;
     max-width: fit-content;
     justify-self: right;
     color: var(--blue);

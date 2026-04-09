@@ -1,5 +1,4 @@
 ---
-const { index = 0 } = Astro.props;
 ---
 
   <div class="entry">
@@ -12,10 +11,12 @@ const { index = 0 } = Astro.props;
 .entry {
   padding: 1em 2em;
   margin: 1em;
+  transition: background-color .3s ease;
+  border-radius: var(--radius);
 }
 
 .entry:hover {
-  transform: scale(1.01);
+  background-color: var(--accent);
 }
 
 </style>
