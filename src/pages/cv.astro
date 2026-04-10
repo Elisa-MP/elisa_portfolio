@@ -1,6 +1,7 @@
 ---
 import TimelineEntry from "../components/timeline-entry.astro";
 import Layout from "../layouts/layout.astro";
+import pdf from "./../assets/CV_ElisaPircher.pdf";
 
 const entries = [
   { year: "09/24 - 07/26", title: "Ausbildung Fachinformaikerin für Anwendungsentwicklung", text: "Laboratoire Biosthétique Kosmetik GmbH & Co. KG, Pforzheim"},
@@ -62,7 +63,7 @@ const entries = [
       </div>
     </div>
 
-    <a class="cv-button" href="/src/assets/CV_ElisaPircher.pdf" download="CV_ElisaPircher.pdf">Download CV</a>
+    <a class="cv-button" href={pdf} download="CV_ElisaPircher.pdf">Download CV</a>
   </div>
 </Layout>
 
